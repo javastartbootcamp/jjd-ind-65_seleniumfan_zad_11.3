@@ -12,10 +12,10 @@ public class OverclockingTest {
     private static final int EXIT = 4;
 
     public OverclockingTest() {
-        Overclockable processor = new Processor("Core i5", "Intel", "12400F", 2500, 65, 95);
-        Overclockable memory = new Memory("Fury Beast", "Kingston", "343434", 32, 3200, 60, 90);
+        OverclockableComponent processor = new Processor("Core i5", "Intel", "12400F", 2500, 65, 95);
+        OverclockableComponent memory = new Memory("Fury Beast", "Kingston", "343434", 3200, 30, 60, 90);
         HardDrive hardDrive = new HardDrive("Segate Expansion Portable", "Segate", "980", 1000);
-        this.computer = new Computer(processor, memory, hardDrive);;
+        this.computer = new Computer(processor, memory, hardDrive);
         scanner = new Scanner(System.in);
     }
 
@@ -59,9 +59,11 @@ public class OverclockingTest {
         System.out.println(EXIT + " - Wyjście z programu");
     }
 
-    private void overclockBy(Overclockable element) {
+    private void overclockBy(OverclockableComponent element) {
         System.out.println("O ile Mhz chcesz podkręcić: ");
         int amount = scanner.nextInt();
         element.overclock(amount);
+        System.out.println(element.getComponentType() + " podkręcono o: " + amount + " Mhz " +
+                "(Maksymalnie możesz podkęcić do: " + element.computeMaxPossibleFrequency() + " Mhz)");
     }
 }

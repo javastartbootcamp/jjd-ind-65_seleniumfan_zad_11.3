@@ -15,7 +15,6 @@ public abstract class Component {
     public String toString() {
         return "name='" + name + '\'' +
                 ", producer='" + producer + '\'' +
-                ", serialNumber='" + serialNumber + '}' +
-                '\'';
+                ", serialNumber='" + serialNumber;
     }
 }

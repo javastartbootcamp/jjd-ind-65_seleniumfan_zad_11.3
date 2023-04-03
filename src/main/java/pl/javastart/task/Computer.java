@@ -3,11 +3,11 @@ package pl.javastart.task;
 import java.util.Objects;
 
 public class Computer {
-    private Overclockable processor;
-    private Overclockable memory;
+    private OverclockableComponent processor;
+    private OverclockableComponent memory;
     private HardDrive hardDrive;
 
-    public Computer(Overclockable processor, Overclockable memory, HardDrive hardDrive) {
+    public Computer(OverclockableComponent processor, OverclockableComponent memory, HardDrive hardDrive) {
         if (Objects.isNull(processor) || Objects.isNull(memory) || Objects.isNull(hardDrive)) {
             throw new NullPointerException("Komputer musi posiadać procesor, pamięc i dysk twardy");
         }
@@ -17,19 +17,19 @@ public class Computer {
         this.hardDrive = hardDrive;
     }
 
-    public Overclockable getProcessor() {
+    public OverclockableComponent getProcessor() {
         return processor;
     }
 
-    public void setProcessor(Overclockable processor) {
+    public void setProcessor(OverclockableComponent processor) {
         this.processor = processor;
     }
 
-    public Overclockable getMemory() {
+    public OverclockableComponent getMemory() {
         return memory;
     }
 
-    public void setMemory(Overclockable memory) {
+    public void setMemory(OverclockableComponent memory) {
         this.memory = memory;
     }
 

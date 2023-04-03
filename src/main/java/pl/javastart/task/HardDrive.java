@@ -10,8 +10,9 @@ public class HardDrive extends Component {
 
     @Override
     public String toString() {
-        return "{" +
-                "capacity=" + capacity +
-                super.toString();
+        return '{' +
+                super.toString()  + '\'' +
+                " capacity=" + capacity +
+                '}';
     }
 }
