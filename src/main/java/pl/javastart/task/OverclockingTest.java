@@ -64,6 +64,6 @@ public class OverclockingTest {
         int amount = scanner.nextInt();
         element.overclock(amount);
         System.out.println(element.getComponentType() + " podkręcono o: " + amount + " Mhz " +
-                "(Maksymalnie możesz podkęcić do: " + element.computeMaxPossibleFrequency() + " Mhz)");
+                "(Maksymalnie możesz podkręcić do: " + element.computeMaxPossibleFrequency() + " Mhz)");
     }
 }
